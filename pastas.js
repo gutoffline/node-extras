@@ -1,15 +1,15 @@
 const fs = require('fs')
 let pasta = 'fotos'
 
-console.log("\n\n===== verificando pasta =====")
-if (fs.existsSync(pasta)) {
-  console.log('Tudo certo')
-} else {
-  console.log('A pasta não existe')
-}
+// console.log("\n\n===== verificando pasta =====")
+// if (fs.existsSync(pasta)) {
+//   console.log('Tudo certo')
+// } else {
+//   console.log('A pasta não existe')
+// }
 
 console.log("\n\n===== criando pasta =====")
-pasta = 'icones'
+pasta = 'icones/ilustracoes'
 if (!fs.existsSync(pasta)) {
   fs.mkdirSync(pasta)
   console.log("pasta criada")
@@ -17,9 +17,9 @@ if (!fs.existsSync(pasta)) {
   console.log("pasta já existe")
 }
 
-console.log("\n\n===== listando conteúdo da pasta =====")
-pasta = 'icones'
-console.log(fs.readdirSync(pasta))
+// console.log("\n\n===== listando conteúdo da pasta =====")
+// pasta = 'icones'
+// console.log(fs.readdirSync(pasta))
 
 console.log("\n\n===== renomeando pasta =====")
 try {
@@ -29,10 +29,19 @@ try {
   console.log("não foi renomeado")
 }
 
-console.log("\n\n===== excluindo pasta =====")
+// console.log("\n\n===== excluindo pasta =====")
+// const fsextra = require('fs-extra')
+
+// const folder = 'icons'
+// fsextra.remove(folder, erro => {
+//   console.error(erro)
+// })
+
+
+console.log("\n\n===== criando pasta =====")
 const fsextra = require('fs-extra')
 
 const folder = 'icons'
-fsextra.remove(folder, erro => {
-  console.error(erro)
+fsextra.mkdirs("teste1/teste2/teste3", erro=>{
+  console.log(erro)
 })

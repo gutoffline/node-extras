@@ -1,16 +1,18 @@
 let fs = require('fs')
 
+
+
 let novoCliente = 'João da Silva\n'
-fs.writeFile('clientes.txt', novoCliente, erro => {
-    if (erro) {
-        console.error(erro)
-        return
-    }
-    console.log("Novo cliente!")
-})
+// fs.writeFile('clientes.txt', novoCliente, erro => {
+//     if (erro) {
+//         console.error(erro)
+//         return
+//     }
+//     console.log("Novo cliente!")
+// })
 
 
-novoCliente = 'Regina George'
+novoCliente = 'Regina George\n'
 fs.appendFile('clientes.txt', novoCliente, erro => {
     if (erro) {
         console.error(erro)
