@@ -1,0 +1,6 @@
+
+Host: AME0635284W11-1
+Total de memória: 15.79gb
+Sistema operacional: Windows 11 Enterprise - Windows_NT 
+Usuário atual: guto.rsxavier
+CPU: 6 - Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz

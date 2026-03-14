@@ -6,10 +6,15 @@ const app = express()
 
 
 app.get('/', (req, res) => {
-    res.send([carros.carro1, carros.carro2])
+    res.send()
 })
 
-console.log([carros.carro1, carros.carro2])
+
+
+carros.fnListarCarros()
+carros.fnCadastrarCarro({marca: 'FIAT', modelo: 'Palio' })
+carros.fnListarCarros()
+
 console.log(process.env.PORTA)
 
 app.listen(3000)

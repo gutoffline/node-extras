@@ -1,13 +1,23 @@
-const carro1 = {
-    marca: 'Ford',
-    modelo: 'Fiesta'
+let carros = [
+    { marca: 'Ford', modelo: 'Fiesta' }, 
+    { marca: 'FIAT', modelo: 'Uno' }
+]
+
+function fnListarCarros(){
+    carros.forEach(carro => {
+        console.log(carro.marca + " - " + carro.modelo)
+    })
 }
 
-const carro2 = {
-    marca: 'FIAT',
-    modelo: 'Uno'
+function fnValidarCarro(carro){
+    return carro
 }
 
+function fnCadastrarCarro(carro){
+    let carro_validado = fnValidarCarro(carro)
+    carros.push(carro_validado)
+    console.log("cadastrado com sucesso!")
+}
 
-exports.carro1 = carro1
-exports.carro2 = carro2
+exports.fnListarCarros = fnListarCarros
+exports.fnCadastrarCarro = fnCadastrarCarro
